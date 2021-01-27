@@ -23,7 +23,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinearL.h" />
+    <ClInclude Include="SeqQueue.h" />
     <ClInclude Include="SeqStack.h" />
+    <ClInclude Include="Tree.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5B257EE7-671C-4750-905C-4AF0200FFD8A}</ProjectGuid>

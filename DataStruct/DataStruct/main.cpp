@@ -1,5 +1,6 @@
 #include "LinearL.h"
 #include "SeqStack.h"
+#include "Tree.h"
 #include <vld.h>
 
 int main()
@@ -63,6 +64,7 @@ int main()
 	PrintStack(&stk);
 #endif
 
+#if 0
 	LkStk ls;
 	InitStack(&ls);
 	Push(&ls, 5);
@@ -72,6 +74,33 @@ int main()
 	Pop(&ls);
 
 	PrintLStack(&ls);
+#endif
+	
+	//¶þ²æÊ÷
+	BNode node1 = { 'a',NULL,NULL };
+	BNode node2 = { 'b',NULL,NULL };
+	BNode node3 = { 'c',NULL,NULL };
+	BNode node4 = { 'd',NULL,NULL };
+	BNode node5 = { 'e',NULL,NULL };
+	BNode node6 = { 'f',NULL,NULL };
+	BNode node7 = { 'g',NULL,NULL };
+	BNode node8 = { 'h',NULL,NULL };
+
+	node1.lchild = &node2;
+	node1.rchild = &node6;
+	node2.rchild = &node3;
+	node3.lchild = &node4;
+	node3.rchild = &node5;
+	node6.rchild = &node7;
+	node7.lchild = &node8;
+
+	//Preorder(&node1);
+	//Midorder(&node1);
+	Postorder(&node1);
+	std::cout << std::endl;
+	
+	
+	std::cout << GetHeight(&node1) << std::endl;
 
 	system("pause");
 	return 0;
